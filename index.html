@@ -156,7 +156,7 @@
             }
           }
 
-          this.result.png = await CanvasRenderer.renderToDataURL(qr, { scale: 40 });
+          this.result.png = await CanvasRenderer.renderToDataURL(qr, { scale: 10 });
           this.result.svg = await renderSVG(qr);
         },
         downloadSVG() {

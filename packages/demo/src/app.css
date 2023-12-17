@@ -1,0 +1,187 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  background-color: #242424;
+  color: rgba(255, 255, 255, 0.87);
+  font-weight: 400;
+  line-height: 1.5;
+  color-scheme: light dark;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  color: #b0b3f5;
+  text-decoration: inherit;
+  font-weight: 500;
+}
+a:not(.button):hover {
+  color: #535bf2;
+}
+
+html {
+  margin: 0;
+}
+
+body {
+  display: flex;
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+
+  place-items: center;
+}
+
+#app {
+  margin: 0 auto;
+  padding: 2rem;
+  max-width: 1280px;
+  text-align: center;
+}
+
+.button {
+  padding: 0.6em 1.6em;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  font-weight: 500;
+  font-size: 1em;
+  font-family: inherit;
+  cursor: pointer;
+  transition: border-color 0.25s;
+  color: inherit;
+
+  &.primary {
+    background-color: hsl(24, 88%, 38%);
+  }
+  &.secondary {
+    background-color: hsl(24, 24%, 56%);
+  }
+
+  &:hover {
+    border-color: #646cff;
+  }
+  &:focus,
+  &:focus-visible {
+    outline: 4px auto -webkit-focus-ring-color;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+
+  a {
+    color: #646cff;
+
+    &:not(.button):hover {
+      color: #747bff;
+    }
+  }
+
+  .button {
+    &.primary {
+      background-color: hsl(24, 78%, 57%);
+    }
+    &.secondary {
+      background-color: hsl(23, 81%, 86%);
+    }
+  }
+}
+
+label:has([disabled]) {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  max-width: 60dvh;
+
+  > * {
+    flex: 1 1 100%;
+  }
+}
+
+input[type="url"] {
+  font-size: 1.5rem;
+  font-family: "Courier New", Courier, monospace;
+  padding: 10px;
+}
+
+.input-options {
+  text-align: right;
+
+  & input[type="checkbox"] {
+    margin-right: 0.5em;
+  }
+}
+
+a[download]:not(.button) {
+  position: relative;
+
+  &:hover::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff9;
+    color: #fff;
+    content: "画像を保存";
+    text-shadow: 0 0 4px #000;
+    font-weight: bold;
+    font-size: 1.8rem;
+  }
+
+  & img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    display: block;
+    box-shadow: 0 0 6px #0007;
+  }
+}
+
+.download-buttons {
+  padding-top: 1rem;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem 2rem;
+
+  > .button {
+    flex: 1 1 auto;
+  }
+}
+
+footer {
+  margin-top: 2rem;
+  color: #aaa;
+
+  & a:hover {
+    opacity: 0.8;
+  }
+
+  & img {
+    display: inline-block;
+    height: 1.5em;
+    margin-left: 0.5em;
+    vertical-align: middle;
+  }
+}

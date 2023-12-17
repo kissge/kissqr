@@ -1,0 +1,28 @@
+{
+  "name": "@kissge/kissqr",
+  "version": "1.0.0-1",
+  "description": "QR Code generator with logo image embedded adhesive",
+  "repository": "kissge/kissqr",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "esbuild src/index.ts --format=esm --bundle --minify --sourcemap --outfile=dist/index.js && tsc --emitDeclarationOnly",
+    "prepublishOnly": "npm run build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "qrcode",
+    "logo",
+    "image"
+  ],
+  "author": "Yusuke Kido <mail@yusuk.eki.do>",
+  "license": "MIT",
+  "dependencies": {
+    "qrcode": "1.5.3"
+  },
+  "devDependencies": {
+    "@types/qrcode": "1.5.5"
+  },
+  "files": [
+    "dist"
+  ]
+}

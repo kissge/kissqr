@@ -1,0 +1,17 @@
+{
+  "private": true,
+  "version": "1.0.0",
+  "description": "QR Code generator with logo image embedded adhesive (monorepo)",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Yusuke Kido <mail@yusuk.eki.do>",
+  "license": "MIT",
+  "packageManager": "pnpm@8.12.0+sha256.553e4eb0e2a2c9abcb419b3262bdc7aee8ae3c42e2301a1807d44575786160c9",
+  "devDependencies": {
+    "@tsconfig/recommended": "^1.0.3",
+    "esbuild": "^0.19.9",
+    "prettier": "^3.1.1",
+    "typescript": "^5.3.3"
+  }
+}

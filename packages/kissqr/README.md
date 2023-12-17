@@ -8,6 +8,8 @@ QR Code generator with logo image embedded adhesive.
 
 https://kissge.github.io/kissqr/
 
+![Sample](https://kissge.github.io/kissqr/sample.svg)
+
 # Sample
 
 ```typescript

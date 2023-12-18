@@ -1,4 +1,4 @@
-import{l as o}from"./logoUtils-RJNGD1kt.js";const a=o({33:`
+import{N as o}from"./index-LB5oJguQ.js";const t={33:o("・／黒")`
 ・・・・・・・／／／／／・・・・・・・
 ・・・・・・／／黒黒黒／／・・・・・・
 ・・・・・／／黒黒黒黒黒／・・・・・・
@@ -18,4 +18,4 @@ import{l as o}from"./logoUtils-RJNGD1kt.js";const a=o({33:`
 ・・・・・・／黒／／／黒／／・・・・・
 ・・・・・・／／黒黒黒／／・・・・・・
 ・・・・・・・／／／／／・・・・・・・
-`});export{a as default};
+`};export{t as default};

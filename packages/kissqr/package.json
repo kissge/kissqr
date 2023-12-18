@@ -1,6 +1,6 @@
 {
   "name": "@kissge/kissqr",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "QR Code generator with logo image embedded adhesive",
   "repository": "kissge/kissqr",
   "main": "dist/index.js",

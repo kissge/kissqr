@@ -13,12 +13,12 @@
     KissQR.create({ data, logo: (embedLogo && logo) || undefined }).then((qr) => {
       output = {
         svg: URL.createObjectURL(new Blob([KissQR.renderToSVGString(qr)], { type: 'image/svg+xml' })),
-        png: KissQR.renderToPNGDataURL(qr),
+        png: KissQR.renderToPNGDataURL(qr, { scale: qr.modules.size > 40 ? 10 : 40 }),
       };
     });
   }
 
-  $: filename = 'kissqr-' + data.replace(/[^a-zA-Z0-9.=-]+/g, '_');
+  $: filename = 'kissqr-' + data.replace(/[^a-zA-Z0-9.=-]+/g, '_').replace(/_+/g, '');
 
   onMount(async () => {
     const logoName = new URLSearchParams(location.search).get('logo') || 'kissge';

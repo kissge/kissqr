@@ -1,7 +1,7 @@
 {
   "name": "@kissge/kissqr-demo",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.2",
   "type": "module",
   "author": "Yusuke Kido <mail@yusuk.eki.do>",
   "license": "MIT",

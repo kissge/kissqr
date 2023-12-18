@@ -1,7 +1,7 @@
-import { logo } from "../lib/logoUtils";
+import { Logo } from "@kissge/kissqr";
 
-export default logo({
-  33: `
+export default {
+  33: Logo("・／黒")`
 ・・・・・・・／／／／／・・・・・・・
 ・・・・・・／／黒黒黒／／・・・・・・
 ・・・・・／／黒黒黒黒黒／・・・・・・
@@ -22,4 +22,4 @@ export default logo({
 ・・・・・・／／黒黒黒／／・・・・・・
 ・・・・・・・／／／／／・・・・・・・
 `,
-});
+};

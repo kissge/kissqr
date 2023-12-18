@@ -2,6 +2,7 @@
 *::before,
 *::after {
   box-sizing: border-box;
+  word-break: auto-phrase;
 }
 
 :root {
@@ -108,7 +109,7 @@ main {
   justify-content: center;
   flex-wrap: wrap;
   gap: 1rem;
-  max-width: 60dvh;
+  max-width: max(60dvh, 480px);
 
   > * {
     flex: 1 1 100%;
@@ -116,7 +117,7 @@ main {
 }
 
 input[type="url"] {
-  font-size: 1.5rem;
+  font-size: max(min(1.5rem, 1.5vw), 12px);
   font-family: "Courier New", Courier, monospace;
   padding: 10px;
 }

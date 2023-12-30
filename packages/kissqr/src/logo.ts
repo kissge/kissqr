@@ -1,6 +1,6 @@
-export type Transparent = 0;
-export type Black = 1;
-export type White = 2;
+export type Transparent = 0 & { _?: never };
+export type Black = 1 & { _?: never };
+export type White = 2 & { _?: never };
 export type LogoDefinition = (Transparent | Black | White)[][];
 
 export interface LogoDefinitionSet {
@@ -15,25 +15,19 @@ export function Logo(
   arg: string | TemplateStringsArray,
 ): LogoDefinition | ((str: TemplateStringsArray) => LogoDefinition) {
   if (typeof arg === "string") {
-    const chars = arg;
-
-    if (chars.length !== 3) {
+    if (arg.length !== 3) {
       throw new Error(
-        `Invalid logo definition: chars must be 3 characters, but got ${chars.length}`,
+        `Invalid logo definition: chars must be 3 characters, but got ${arg.length}`,
       );
     }
 
-    if (
-      chars[0] === chars[1] ||
-      chars[1] === chars[2] ||
-      chars[2] === chars[0]
-    ) {
+    if (arg[0] === arg[1] || arg[1] === arg[2] || arg[2] === arg[0]) {
       throw new Error(
         "Invalid logo definition: chars must have 3 different characters",
       );
     }
 
-    return _Logo(chars);
+    return _Logo(arg);
   } else {
     return _Logo(".-*")(arg);
   }
@@ -52,7 +46,7 @@ function _Logo(chars: string): (str: TemplateStringsArray) => LogoDefinition {
             throw new Error(`Invalid character: ${c}`);
           }
 
-          return index as Transparent | Black | White;
+          return index;
         }),
       );
 
@@ -62,6 +56,6 @@ function _Logo(chars: string): (str: TemplateStringsArray) => LogoDefinition {
       );
     }
 
-    return definition;
+    return definition as LogoDefinition;
   };
 }
